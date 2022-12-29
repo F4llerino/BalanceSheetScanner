@@ -2,6 +2,7 @@
 Scanning specific profitable and financially ratios
 
 Wichtig: Um das Programm richtig nutzen zu können muss im Code in der data_operations-Datei erst ein API-Key hinzugefügt werden!
+Youtube-Link: https://www.youtube.com/watch?v=9MGYmce9Trk
 
 1. Einleitung:
 Das Programm zeigt verschiedene finanzwirtschaftliche und erfolgwirtschaftliche Kennzahlen von Unternehmen. Das besondere dabei ist, dass unter "Einstellungen" verschiedene Filter eingestellt werden können, um die Kennzahlen entsprechend hervorzuheben. Standardgemäß sind keine Filter eingestellt.
