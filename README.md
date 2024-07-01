@@ -1,27 +1,47 @@
 # BalanceSheetScanner
-Scanning specific profitable and financially ratios - Youtube-Link: https://www.youtube.com/watch?v=9MGYmce9Trk
 
-Wichtig: Um das Programm richtig nutzen zu können muss im Code in der data_operations-Datei erst ein API-Key hinzugefügt werden!
+Scanning specific profitable and financial ratios  
+**YouTube Link**: [Watch the BalanceSheetScanner](https://www.youtube.com/watch?v=9MGYmce9Trk)
 
+**Important**: To properly use the program, you must first add an API key in the `data_operations` file!
 
-1. Einleitung:
-Das Programm zeigt verschiedene finanzwirtschaftliche und erfolgwirtschaftliche Kennzahlen von Unternehmen. Das besondere dabei ist, dass unter "Einstellungen" verschiedene Filter eingestellt werden können, um die Kennzahlen entsprechend hervorzuheben. Standardgemäß sind keine Filter eingestellt.
-Die Ergebnisse können in Form einer PDF-Datei gespeichert werden und auch als hard copy ausgedruckt werden.
-________________________________________________________________________________________________________________________________________________________________
+## Introduction
 
-2. Funktionsweise:
-Die Daten werden über die Yahoo Finance API genutzt. Genauer gesagt wird der vierteljährliche Geschäftsabschluss verwendet, wobei es keine vierteljährliche Kapitalflussrechnung gab und deshalb die jährliche Kapitalflussrechnung verwendet wurde.
-Das GUI wurde mit Tkinter umgesetzt, wobei alle Funktionen über die Buttons in der GUI.py sind.
-Die PDF wurde mit dem Modul FPDF erstellt und in dem Verzeichnis wo sich die main.py befindet gespeichert.
-Die Einstellungen werden in einer JSON-Datei in dem Verzeichnis der main.py gespeichert.
+The BalanceSheetScanner program displays various financial and performance metrics of companies. One of its key features is the ability to set different filters under "Settings" to highlight specific metrics. By default, no filters are applied. The results can be saved as a PDF file and printed as a hard copy.
 
-Das Programm führt die eingestellten mathematischen Vergleiche aus und falls eine Einstellung zutreffend ist, wird das Ergebnis im Ergebnisfenster hellblau markiert.
-________________________________________________________________________________________________________________________________________________________________
+## How It Works
 
-3. Besonderheiten:
-Sollte keine entsprechende PDF-Datei im Verzeichnis bei der Erstbenutzung sein, muss die Anwendung zuerst komplett geschlossen werden, um die PDF-Datei das erste Mal zu erstellen. Wurde diese einmal erstellt, wird diese immer direkt überschrieben, auch wenn die Anwendung nicht geschlossen wird.
-Diese Besonderheit muss also beim Ausdrucken auch beachtete werden, da diese Funktion auf der PDF-Datei basiert.
+- **Data Source**: The program uses data from the Yahoo Finance API, specifically the quarterly financial statements. Due to the absence of quarterly cash flow statements, the annual cash flow statements are used instead.
+- **GUI Implementation**: The graphical user interface (GUI) is implemented using Tkinter. All functions are accessible via buttons in the `GUI.py` file.
+- **PDF Generation**: The PDF reports are created using the FPDF module and saved in the directory where `main.py` is located.
+- **Settings Storage**: User settings are stored in a JSON file within the same directory as `main.py`.
 
-Manche Unternehmen haben bei manchen Bilanzpositionen keine Angaben, weshalb es vereinzelnt zu Fehlermeldungen kommen kann. Z.B. ist bei dte.de (Deutsche Telekom AG) keine Angabe bei der SG&A-Quote. Teilweise wurde dieser Fehler behoben, jeodch nur für wenige Positionen.
+The program performs the configured mathematical comparisons and highlights the results in the results window if a condition is met.
 
-Kennungen, die fehlerfrei ausprobiert worden sind: lyb (Lyondell Basell), dte.de (Deutsche Telekom AG), aapl (Apple Inc.)
+## Features
+
+1. **Initial PDF Creation**: If no PDF file is found in the directory upon first use, the application must be closed completely to create the PDF file for the first time. Once created, the PDF will always be overwritten directly, even if the application is not closed. This behavior must be considered when printing, as the print function is based on the PDF file.
+2. **Handling Missing Data**: Some companies may have missing data for certain balance sheet positions, which can result in occasional errors. For example, Deutsche Telekom AG (dte.de) lacks data for the SG&A ratio. This issue has been partially resolved for a few positions.
+
+## Tested Identifiers
+
+The following identifiers have been tested and confirmed to work without errors:
+- **lyb** (Lyondell Basell)
+- **dte.de** (Deutsche Telekom AG)
+- **aapl** (Apple Inc.)
+
+## Usage
+
+1. **Add API Key**: Open the `data_operations` file and add your API key.
+2. **Run the Program**: Execute `main.py` to start the application.
+3. **Set Filters**: Use the "Settings" menu to apply filters and customize the metrics displayed.
+4. **Generate PDF**: Save the results as a PDF file via the provided option in the GUI.
+5. **Print Results**: Print the PDF file as needed.
+
+## Contact
+
+For any questions or feedback, please feel free to open an issue on GitHub or reach out directly.
+
+---
+
+*Happy Scanning!* 📊
